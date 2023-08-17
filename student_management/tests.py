@@ -16,6 +16,9 @@ class StudentTests(APITestCase):
         self.list_url = reverse('student-list-create')
         self.detail_url = reverse('student-detail', args=[self.student.id])
 
+    def test_student_string_representation(self):
+        self.assertEqual(str(self.student), "John Doe")
+
     def test_create_student(self):
         data = {
             "first_name": "Jane",
@@ -47,6 +50,5 @@ class StudentTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['first_name'], 'Jane')
 
-        # Refresh the student instance from the database
         self.student.refresh_from_db()
         self.assertEqual(self.student.first_name, 'Jane')

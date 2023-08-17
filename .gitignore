@@ -1,0 +1,7 @@
+
+efex_student_management/__pycache__/settings.cpython-311.pyc
+student_management/__pycache__/tests.cpython-311.pyc
+
+.coverage
+.idea/
+__pycache__

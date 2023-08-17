@@ -79,8 +79,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'mysql.connector.django',
         'NAME': 'efex',
-        'USER': 'root',  # Usuario root por defecto
-        'PASSWORD': 'toor',  # Contraseña que estableciste
+        'USER': 'root',
+        'PASSWORD': 'toor',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     },
